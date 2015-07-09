@@ -50,8 +50,12 @@ group :development, :test do
 end
 
 gem 'slim-rails'
+gem 'bootstrap-sass'
+gem 'twitter-bootstrap-rails'
+gem 'bootswatch-rails'
 
 gem 'devise'
 gem 'omniauth'
 
 gem 'unicorn'
+
