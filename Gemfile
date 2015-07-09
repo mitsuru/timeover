@@ -44,6 +44,9 @@ group :development, :test do
 
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+
+  gem 'capistrano'
+  gem 'capistrano-rails'
 end
 
 gem 'slim-rails'
