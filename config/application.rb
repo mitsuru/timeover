@@ -31,5 +31,13 @@ module Timeover
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.generators do |g|
+      g.stylesheets false
+      g.javascripts false
+      g.template_engine :slim
+      g.test_framework :rspec, veiw_spec: false, fixture: true
+      g.fixture_replacement :factory_girl, dir: "spec/factries"
+    end
   end
 end
