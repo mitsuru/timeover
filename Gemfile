@@ -53,3 +53,5 @@ gem 'slim-rails'
 
 gem 'devise'
 gem 'omniauth'
+
+gem 'unicorn'
