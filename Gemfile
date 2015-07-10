@@ -64,4 +64,4 @@ gem 'omniauth'
 gem 'omniauth-timecrowd', git: 'git@github.com:ruffnote/timecrowd.git'
 
 gem 'unicorn'
-
+gem 'figaro'
