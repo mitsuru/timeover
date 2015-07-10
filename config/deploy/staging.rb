@@ -1,5 +1,5 @@
 set :deploy_to, '/home/timeover/www'
-ask :branch, 'develop'
+set :branch, 'develop'
 
 # server-based syntax
 # ======================
