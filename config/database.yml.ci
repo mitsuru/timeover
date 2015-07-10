@@ -1,0 +1,11 @@
+test:
+  host: localhost
+  username: ubuntu
+  database: circle_ruby_test
+  adapter: mysql2
+
+staging:
+  host: localhost
+  username: ubuntu
+  database: circle_ruby_test
+  adapter: mysql2
