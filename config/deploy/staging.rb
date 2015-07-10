@@ -1,3 +1,5 @@
+set :deploy_to, '/home/timeover/www'
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
