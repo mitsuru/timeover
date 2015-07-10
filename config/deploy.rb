@@ -49,3 +49,11 @@ namespace :deploy do
   end
 
 end
+
+after 'deploy:publishing', 'deploy:restart'
+namespace :deploy do
+  task :restart do
+    invoke 'unicorn:restart'
+  end
+end
+
