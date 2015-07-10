@@ -1,0 +1,21 @@
+machine:
+  ruby:
+    version: 2.2.0
+
+dependencies:
+  cache_directories:
+    - tmp/cache/assets
+    - public/assets
+
+database:
+  override:
+    - mv config/database.yml.ci config/database.yml
+    - bundle exec rake db:create db:schema:load --trace
+    - if [[ "$CIRCLE_BRANCH" -eq "master" ]]; then bundle exec rake assets:precompile RAILS_ENV=staging; fi
+
+deployment:
+  develop:
+    branch: develop
+    commands:
+      - bundle exec cap staging deploy:
+          timeout: 1500
