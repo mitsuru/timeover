@@ -59,7 +59,6 @@ namespace :figaro do
   end
 end
 after "deploy:started", "figaro:setup"
-after "deploy:symlink:release", "figaro:symlink"
 
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
