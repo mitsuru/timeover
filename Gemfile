@@ -53,6 +53,8 @@ group :development, :test do
   gem 'capistrano3-unicorn'
 end
 
+gem 'rails-footnotes', '~> 4.0'
+
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'twitter-bootstrap-rails'
