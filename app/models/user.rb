@@ -14,6 +14,9 @@ class User < ActiveRecord::Base
         password: Devise.friendly_token[0, 20],
         token: auth.credentials.token
       )
+    else
+      user.token = auth.credentials.token
+      user.save
     end
 
     user
