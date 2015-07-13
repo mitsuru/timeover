@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :omniauthable,
          :registerable, :rememberable, :trackable, :validatable, :omniauth_providers => [:timecrowd]
 
+  has_many :milestones
+
   def self.find_for_oauth(auth)
     user = self.find_by(uid: auth.uid, provider: auth.provider)
     unless user

@@ -1,0 +1,18 @@
+= simple_form_for @milestone, :html => { :class => "form-horizontal" } do |f|
+  = f.input :user, collection: User.all
+  = error_span(@milestone[:user])
+  = f.input :title
+  = error_span(@milestone[:title])
+  = f.input :start_at
+  = error_span(@milestone[:start_at])
+  = f.input :end_at
+  = error_span(@milestone[:end_at])
+  = f.input :state
+  = error_span(@milestone[:state])
+  = f.input :budget
+  = error_span(@milestone[:budget])
+  = f.input :budget_time
+  = error_span(@milestone[:budget_time])
+  = f.button :submit, :class => 'btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), milestones_path, :class => 'btn btn-default'

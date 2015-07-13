@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711101447) do
+ActiveRecord::Schema.define(version: 20150711124312) do
+
+  create_table "milestones", force: :cascade do |t|
+    t.integer  "user_id",     limit: 4
+    t.string   "title",       limit: 255
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.string   "state",       limit: 255
+    t.integer  "budget",      limit: 4
+    t.integer  "budget_time", limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  add_index "milestones", ["state"], name: "index_milestones_on_state", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

@@ -1,0 +1,12 @@
+.navbar-collapse.collapse.navbar-responsive-collapse
+  ul.nav.navbar-nav
+    li= link_to Milestone.model_name.human, milestones_path
+    li= link_to "Link 2", "/path2"
+    li= link_to "Link 3", "/path3"
+  .container.navbar-collapse
+    ul.nav.navbar-nav.navbar-right 
+      - if user_signed_in?
+        li= link_to t('sign_out'), destroy_user_session_path, method: :delete
+      - else
+        li= link_to t('sign_in'), new_user_session_path
+
