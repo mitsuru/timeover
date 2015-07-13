@@ -1,0 +1,39 @@
+= form_for @milestone, html: { class: "form form-horizontal milestone" } do |f|
+  .form-group
+    = f.label :user_id, :class => 'control-label'
+    .controls
+      = f.text_field :user_id, :class => 'form-control'
+    = error_span(@milestone[:user_id])
+  .form-group
+    = f.label :title, :class => 'control-label'
+    .controls
+      = f.text_field :title, :class => 'form-control'
+    = error_span(@milestone[:title])
+  .form-group
+    = f.label :start_at, :class => 'control-label'
+    .controls
+      = f.text_field :start_at, :class => 'form-control'
+    = error_span(@milestone[:start_at])
+  .form-group
+    = f.label :end_at, :class => 'control-label'
+    .controls
+      = f.text_field :end_at, :class => 'form-control'
+    = error_span(@milestone[:end_at])
+  .form-group
+    = f.label :state, :class => 'control-label'
+    .controls
+      = f.text_field :state, :class => 'form-control'
+    = error_span(@milestone[:state])
+  .form-group
+    = f.label :budget, :class => 'control-label'
+    .controls
+      = f.text_field :budget, :class => 'form-control'
+    = error_span(@milestone[:budget])
+  .form-group
+    = f.label :budget_time, :class => 'control-label'
+    .controls
+      = f.text_field :budget_time, :class => 'form-control'
+    = error_span(@milestone[:budget_time])
+  = f.submit nil, :class => 'btn btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), milestones_path, :class => 'btn'

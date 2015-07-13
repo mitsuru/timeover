@@ -239,7 +239,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :timecrowd, Figaro.env.timecrowd_app_id, Figaro.env.timecrowd_secret
+  config.omniauth :timecrowd, Figaro.env.timecrowd_app_id, Figaro.env.timecrowd_secret, client_options: { site: 'https://timecrowd.0.0.0.0.xip.io', ssl: { verify: false } }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
