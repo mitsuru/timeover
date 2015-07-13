@@ -10,6 +10,7 @@ dependencies:
 database:
   override:
     - mv config/database.yml.ci config/database.yml
+    - mv config/application.yml.ci config/application.yml
     - bundle exec rake db:create db:schema:load --trace
     - if [[ "$CIRCLE_BRANCH" -eq "master" ]]; then bundle exec rake assets:precompile RAILS_ENV=staging; fi
 
