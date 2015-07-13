@@ -63,7 +63,7 @@ gem 'devise-bootstrap-views'
 
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-timecrowd', git: 'git@github.com:ruffnote/timecrowd.git'
+gem 'omniauth-timecrowd', github: 'ruffnote/omniauth-timecrowd'
 
 gem 'unicorn'
 gem 'figaro'

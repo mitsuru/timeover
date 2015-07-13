@@ -1,6 +1,6 @@
 GIT
-  remote: git@github.com:ruffnote/timecrowd.git
-  revision: 7f55f6a9c75a49361dbca6d5646315e0846a1e77
+  remote: git://github.com/ruffnote/omniauth-timecrowd.git
+  revision: a41cdde8b0ae975950cd0fdc032e4e1439619d48
   specs:
     omniauth-timecrowd (0.1.0)
       omniauth (>= 1.1.1)
