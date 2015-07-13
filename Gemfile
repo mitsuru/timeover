@@ -61,6 +61,7 @@ gem 'bootstrap-sass'
 gem 'twitter-bootstrap-rails'
 gem 'bootswatch-rails'
 gem 'devise-bootstrap-views'
+gem 'simple_form'
 
 gem 'devise'
 gem 'omniauth'
