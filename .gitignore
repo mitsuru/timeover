@@ -13,3 +13,6 @@
 /tmp
 
 config/database.yml
+config/application.yml
+config/*.staging.yml
+config/*.production.yml

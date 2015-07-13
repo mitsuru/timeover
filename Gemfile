@@ -47,8 +47,14 @@ group :development, :test do
   gem 'factory_girl_rails'
 
   gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
   gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
+  gem 'capistrano-upload-config'
 end
+
+gem 'rails-footnotes', '~> 4.0'
 
 gem 'slim-rails'
 gem 'bootstrap-sass'
@@ -58,6 +64,7 @@ gem 'devise-bootstrap-views'
 
 gem 'devise'
 gem 'omniauth'
+gem 'omniauth-timecrowd', git: 'git@github.com:ruffnote/timecrowd.git'
 
 gem 'unicorn'
-
+gem 'figaro'

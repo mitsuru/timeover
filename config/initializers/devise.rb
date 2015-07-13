@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '8990a864912d1f686dbc582fce0caa99a8321f2f026ee7972ed61a749b86709cf16c763d2433cc21fb86dd5139850bd5ae10606fbda409b5bb7719071e480fba'
+  config.secret_key = '8990a864912d1f686dbc582fce0caa99a8321f2f026ee7972ed61a749b86709cf16c763d2433cc21fb86dd5139850bd5ae10606fbda409b5bb7719071e480fba'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -239,6 +239,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :timecrowd, Figaro.env.timecrowd_app_id, Figaro.env.timecrowd_secret
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
