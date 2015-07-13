@@ -54,6 +54,8 @@ group :development, :test do
   gem 'capistrano-upload-config'
 end
 
+gem 'kaminari'
+
 gem 'rails-footnotes', '~> 4.0'
 
 gem 'slim-rails'
