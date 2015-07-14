@@ -7,6 +7,11 @@
     ul.nav.navbar-nav.navbar-right 
       - if user_signed_in?
         li= link_to t('sign_out'), destroy_user_session_path, method: :delete
+        li.dropdown
+          a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
+            span.caret
+          ul.dropdown-menu
+            li= link_to t('preferences'), preferences_path
       - else
         li= link_to t('sign_in'), new_user_session_path
 
