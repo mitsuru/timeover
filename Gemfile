@@ -69,6 +69,7 @@ gem 'simple_form_bootstrap3'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-timecrowd', github: 'ruffnote/omniauth-timecrowd'
+gem 'cancancan'
 gem 'activerecord-typedstore'
 
 gem 'unicorn'
