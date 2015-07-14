@@ -67,6 +67,7 @@ gem 'simple_form'
 gem 'simple_form_bootstrap3'
 
 gem 'devise'
+gem 'devise-i18n'
 gem 'omniauth'
 gem 'omniauth-timecrowd', github: 'ruffnote/omniauth-timecrowd'
 gem 'cancancan'
