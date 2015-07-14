@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :registerable, :rememberable, :trackable, :validatable, :omniauth_providers => [:timecrowd]
 
   has_many :milestones
+  has_many :time_entries
 
   def self.find_for_oauth(auth)
     user = self.find_by(uid: auth.uid, provider: auth.provider)

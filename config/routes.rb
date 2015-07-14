@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :milestones
+  resources :time_entries, only: [ :index, :show, :edit ] do
+    collection do
+      post :sync
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

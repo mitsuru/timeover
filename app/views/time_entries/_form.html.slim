@@ -1,0 +1,14 @@
+= simple_form_for @time_entry, :html => { :class => "form-horizontal" } do |f|
+  = f.input :milestone
+  = error_span(@time_entry[:milestone])
+  = f.input :started_at
+  = error_span(@time_entry[:started_at])
+  = f.input :stopped_at
+  = error_span(@time_entry[:stopped_at])
+  = f.input :duration
+  = error_span(@time_entry[:duration])
+  = f.input :json
+  = error_span(@time_entry[:json])
+  = f.button :submit, :class => 'btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), time_entries_path, :class => 'btn btn-default'
