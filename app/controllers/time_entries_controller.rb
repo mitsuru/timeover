@@ -27,7 +27,8 @@ class TimeEntriesController < ApplicationController
       time_entry.user = current_user
       time_entry.started_at = Time.at(e["started_at"])
       time_entry.stopped_at = Time.at(e["stopped_at"])
-      time_entry.duration = time_entry.stopped_at - time_entry.started_at
+      time_entry.duration = e["duration"]
+      time_entry.json = e.to_json
       time_entry.save
     end
   end
