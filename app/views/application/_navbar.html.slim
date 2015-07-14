@@ -11,7 +11,7 @@
           a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
             span.caret
           ul.dropdown-menu
-            li= link_to t('preferences'), preferences_path
+            li= link_to t('preferences'), user_preference_path
       - else
         li= link_to t('sign_in'), new_user_session_path
 

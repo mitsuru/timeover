@@ -1,0 +1,16 @@
+- model_class = UserPreference
+div class="page-header"
+  h1=t '.title', :default => model_class.model_name.human.titleize
+
+p
+  strong= model_class.human_attribute_name(:user_id) + ':'
+  br
+  = @user_preference.user_id
+p
+  strong= model_class.human_attribute_name(:start) + ':'
+  br
+  = @user_preference.start
+
+= link_to t('.back', :default => t("helpers.links.back")), user_preference_path, :class => 'btn btn-default'
+'
+= link_to t('.edit', :default => t("helpers.links.edit")), edit_user_preference_path(@user_preferences), :class => 'btn btn-default'
