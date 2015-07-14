@@ -1,4 +1,6 @@
 class TimeEntriesController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @time_entries = current_user.time_entries.page(params[:page]).per(100)
   end
