@@ -1,6 +1,7 @@
 - model_class = TimeEntry
 div class="page-header"
   h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+  = link_to t('.sync', :default => t("helpers.links.sync")), sync_time_entries_path, :method => :post, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
 table class="table table-striped"
   thead
     tr
