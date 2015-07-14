@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :milestones
   has_many :time_entries
+  has_one  :preferences, class_name: UserPreference
 
   def self.find_for_oauth(auth)
     user = self.find_by(uid: auth.uid, provider: auth.provider)
