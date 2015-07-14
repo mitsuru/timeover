@@ -2,6 +2,8 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    user ||= User.new # guest user
+
     can :manage, TimeEntry, user_id: user.id
     can :manage, Milestone, user_id: user.id
 
