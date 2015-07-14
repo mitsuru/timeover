@@ -52,6 +52,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
   gem 'capistrano-upload-config'
+  gem 'chatwork'
 end
 
 gem 'rails-i18n'
