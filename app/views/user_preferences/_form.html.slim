@@ -1,0 +1,6 @@
+= simple_form_for @user_preference, :html => { :class => "form-horizontal" } do |f|
+  = f.input :start, input_html: { class: 'datetimepicker' }
+  = error_span(@user_preference[:start])
+  = f.button :submit, :class => 'btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), user_preference_path, :class => 'btn btn-default'

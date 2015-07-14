@@ -2,10 +2,11 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :omniauthable,
-         :registerable, :rememberable, :trackable, :validatable, :omniauth_providers => [:timecrowd]
+         :rememberable, :trackable, :validatable, :omniauth_providers => [:timecrowd]
 
   has_many :milestones
   has_many :time_entries
+  has_one  :preferences, class_name: UserPreference
 
   def self.find_for_oauth(auth)
     user = self.find_by(uid: auth.uid, provider: auth.provider)

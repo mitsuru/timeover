@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
+//= require bootstrap
+//= require jQuery-Timepicker-Addon/dist/jquery-ui-timepicker-addon
 //= require bootstrap-datepicker
 //= require bootstrap-datetimepicker
 //= require_tree .

@@ -67,8 +67,16 @@ gem 'simple_form'
 gem 'simple_form_bootstrap3'
 
 gem 'devise'
+gem 'devise-i18n'
 gem 'omniauth'
 gem 'omniauth-timecrowd', github: 'ruffnote/omniauth-timecrowd'
+gem 'cancancan'
+gem 'activerecord-typedstore'
 
 gem 'unicorn'
 gem 'figaro'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery-ui'
+  gem 'rails-assets-jQuery-Timepicker-Addon', '1.5.4'
+end
