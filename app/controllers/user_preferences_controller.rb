@@ -16,6 +16,6 @@ class UserPreferencesController < ApplicationController
 
   private
   def preferences_params
-    params.require(:preferences).permit(:start)
+    params.require(:user_preference).permit(:start)
   end
 end
