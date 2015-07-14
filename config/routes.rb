@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :milestones
-  resources :time_entries, only: [ :index ] do
+  resources :time_entries, only: [ :index, :show, :edit ] do
     collection do
       post :sync
     end

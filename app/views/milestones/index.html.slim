@@ -31,5 +31,8 @@ table class="table table-striped"
           '
           = link_to t('.destroy', :default => t("helpers.links.destroy")), milestone_path(milestone), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
 
+
+h3= t('.cumulative') + " #{@duration / 60 / 60}"
+
 = link_to t('.new', :default => t("helpers.links.new")), new_milestone_path, :class => 'btn btn-primary'
 
