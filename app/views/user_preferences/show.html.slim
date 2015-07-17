@@ -9,7 +9,7 @@ p
 p
   strong= model_class.human_attribute_name(:start) + ':'
   br
-  = @user_preference.start
+  = @user_preference.start.localtime
 
 = link_to t('.back', :default => t("helpers.links.back")), user_preference_path, :class => 'btn btn-default'
 '
