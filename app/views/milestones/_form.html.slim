@@ -1,9 +1,9 @@
 = simple_form_for @milestone, :html => { :class => "form-horizontal" } do |f|
   = f.input :title
   = error_span(@milestone[:title])
-  = f.input :start_at
+  = f.input :start_at, as: :string, input_html: { class: 'datetimepicker' }
   = error_span(@milestone[:start_at])
-  = f.input :end_at
+  = f.input :end_at, as: :string, input_html: { class: 'datetimepicker' }
   = error_span(@milestone[:end_at])
   = f.input :state
   = error_span(@milestone[:state])
