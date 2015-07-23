@@ -3,7 +3,8 @@ class MilestonesController < ApplicationController
 
   def index
     @milestones = current_user.milestones
-    @duration = current_user.time_entries.sum(:duration)
+    start = current_user.preferences.start
+    @duration = current_user.time_entries.where('started_at >= ?', start).sum(:duration)
   end
 
   def new
@@ -12,6 +13,9 @@ class MilestonesController < ApplicationController
 
   def create
     @milestone = current_user.milestones.build(milestone_params)
+    if @milestone.save
+      redirect_to milestones_path
+    end
   end
 
   def edit
@@ -29,6 +33,6 @@ class MilestonesController < ApplicationController
 
   private
   def milestone_params
-    params.require(:milestone).permit(:title, :start_at, :state)
+    params.require(:milestone).permit(:title, :start_at, :state, :budget, :budget_time)
   end
 end

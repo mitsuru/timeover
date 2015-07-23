@@ -23,13 +23,15 @@ class TimeEntriesController < ApplicationController
   private
   def sync_time_entries(entries)
     entries.each do |e|
-      time_entry = TimeEntry.find_or_initialize_by id: e["id"]
-      time_entry.user = current_user
-      time_entry.started_at = Time.at(e["started_at"])
-      time_entry.stopped_at = Time.at(e["stopped_at"])
-      time_entry.duration = e["duration"]
-      time_entry.json = e.to_json
-      time_entry.save
+      if e["user"]["id"].to_s == current_user.uid
+        time_entry = TimeEntry.find_or_initialize_by id: e["id"]
+        time_entry.user = current_user
+        time_entry.started_at = Time.at(e["started_at"])
+        time_entry.stopped_at = Time.at(e["stopped_at"])
+        time_entry.duration = e["duration"]
+        time_entry.json = e.to_json
+        time_entry.save
+      end
     end
   end
 end

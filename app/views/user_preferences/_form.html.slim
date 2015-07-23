@@ -1,5 +1,5 @@
 = simple_form_for @user_preference, :html => { :class => "form-horizontal" } do |f|
-  = f.input :start, input_html: { class: 'datetimepicker' }
+  = f.input :start, as: :string, input_html: { class: 'datetimepicker' }
   = error_span(@user_preference[:start])
   = f.button :submit, :class => 'btn-primary'
   '
