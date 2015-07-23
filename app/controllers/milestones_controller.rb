@@ -15,6 +15,8 @@ class MilestonesController < ApplicationController
     @milestone = current_user.milestones.build(milestone_params)
     if @milestone.save
       redirect_to milestones_path
+    else
+      render :new
     end
   end
 
